@@ -26,5 +26,5 @@ export class TestimonialsComponent implements OnInit {
  
   ngOnInit() {
   }
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "dots":true, "infinite":false, "speed":900, "autoplay": true,  "arrows":true};
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "infinite":false, "speed":900,  "arrows":true};
 }

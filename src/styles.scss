@@ -34,6 +34,26 @@ html, body { height: 100%; }
 body { margin: 0; font-family: 'Oswald', sans-serif;}
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+hr {
+    width:60px !important;
+    border: 1px solid #ffc601 !important;
+    margin-top: 0  !important;
+}
 
+.slick-dotted.slick-slider {
+    margin-bottom: 0 !important;
+    .slick-dots {
+        bottom: 10px ;
+    }
+    .slick-dots li button:before {
+        font-size: 18px;
+        color:#ffc601;
+    }
+    
+    
+}
 
+// .slick-next:before {
+//     content: ""!important;
 
+// }
