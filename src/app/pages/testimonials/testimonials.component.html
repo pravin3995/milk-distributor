@@ -1,0 +1,19 @@
+<section class="testimonials mt-5 pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center">Testimonials</h2>
+        <ngx-slick-carousel class="carousel" 
+            #slickModal="slick-carousel" 
+            [config]="slideConfig" 
+            (init)="slickInit($event)"
+            (breakpoint)="breakpoint($event)"
+            (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide d-flex justify-content-center align-items-center">
+                <div class=" text-center">
+                    <p>{{slide.description}}</p>
+                    <p class="font-weight-bold">{{slide.clientName}}</p>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</section>

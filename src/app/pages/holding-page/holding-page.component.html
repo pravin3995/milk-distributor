@@ -1,0 +1,30 @@
+
+<ngx-slick-carousel class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide d-flex justify-content-center align-items-center">
+        <img src="{{ slide.img }}" alt="" width="100%" class="position-relative">
+        <div class=" position-absolute banner-title text-white text-center">
+            <h1>{{ title }}</h1> 
+            <h6>{{ subtitle }}</h6>
+            <div class="btn-group" *ngFor="let button of buttonData">
+                <div class="mt-3">
+                    <button (click)="button.description; button.img">{{button.title}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ngx-slick-carousel>
+
+
+
+<!-- <button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button> -->
+
+
